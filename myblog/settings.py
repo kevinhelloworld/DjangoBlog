@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%h##)te9!2^om-9+tgc9y-^_vxr(z&b@j4rau$5!c$nzc8u6+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #上线项目需要关闭，默认是开启的
+DEBUG = False #上线项目需要关闭，默认是开启的
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['139.199.183.144', 'xupinjun.cn']
 
 
 # Application definition
@@ -120,7 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(__file__),'static')
+#STATIC_ROOT = os.path.join(os.path.dirname(__file__),'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 设置图片等静态文件的路径
 STATICFILES_DIRS = (
 	('css',os.path.join(STATIC_ROOT,'css').replace('\\','/') ),
